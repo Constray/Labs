@@ -1,0 +1,36 @@
+@model IEnumerable<Database.EFCore.Entities.ProductEntity>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "_Layout";
+}
+
+<h2>Product List</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      Code
+    </div>    
+    <div class="col">
+      Name
+    </div>
+    <div class="col">
+      Quantity
+    </div>
+  </div>
+  @foreach (var product in Model)
+  {
+    <div class="row">
+      <div class="col">
+        @product.Code
+      </div>    
+      <div class="col">
+        @product.Name
+      </div>
+      <div class="col">
+        @product.Quantity
+      </div>
+    </div>
+  }
+</div>
